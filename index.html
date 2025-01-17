@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop de Pilates e Fáscia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg'); /* Substitua pelo URL real da imagem */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: left;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #f9c74f;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"], input[type="email"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            padding: 10px;
+            background: #f9c74f;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #e0a808;
+        }
+        .redirect-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Workshop de Pilates e Fáscia</h1>
+        <p>Amplie seus conhecimentos e obtenha resultados incríveis na aplicação dos conceitos miofasciais ao Pilates.</p>
+        <form id="registrationForm">
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <button type="submit">Quero participar!</button>
+        </form>
+        <div class="redirect-message" id="redirectMessage">
+            Cadastro realizado com sucesso! Você será redirecionado para o grupo do WhatsApp em 10 segundos.
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const redirectMessage = document.getElementById('redirectMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            form.style.display = 'none';
+            redirectMessage.style.display = 'block';
+
+            setTimeout(() => {
+                window.location.href = 'https://chat.whatsapp.com/invite-link'; // Substitua pelo link real do grupo
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
