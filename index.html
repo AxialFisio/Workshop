@@ -1,104 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop de Pilates e Fáscia</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://www.solidbackgrounds.com/images/1920x1080/1920x1080-gray-solid-color-background.jpg'); /* Substitua pelo URL real da imagem */
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .container {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 40px;
-            border-radius: 10px;
-            max-width: 400px;
-            text-align: left;
-        }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #f9c74f;
-        }
-        p {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input[type="text"], input[type="email"] {
-            padding: 10px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        button {
-            padding: 10px;
-            background: #f9c74f;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #000;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background: #e0a808;
-        }
-        .redirect-message {
-            display: none;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-    </style>
+  <title>Contact me</title>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Workshop de Pilates e Fáscia</h1>
-        <p>Amplie seus conhecimentos e obtenha resultados incríveis na aplicação dos conceitos miofasciais ao Pilates.</p>
-        <form id="registrationForm">
-            <input type="text" name="name" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Seu e-mail" required>
-            <button type="submit">Quero participar!</button>
-        </form>
-        <div class="redirect-message" id="redirectMessage">
-            Cadastro realizado com sucesso! Você será redirecionado para o grupo do WhatsApp em 10 segundos.
+<form method="post" action="https://forms.un-static.com/forms/046c4496d5fcdddba6095131c7f799dd7972f9ff">
+  <div class="form-group row">
+    <label for="name" class="col-4 col-form-label">Name</label>
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="fa fa-user"></i>
         </div>
+        <input id="name" name="name" placeholder="Please enter your name" type="text" required="required" class="form-control">
+      </div>
     </div>
-
-    <script>
-        const form = document.getElementById('registrationForm');
-        const redirectMessage = document.getElementById('redirectMessage');
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            form.style.display = 'none';
-            redirectMessage.style.display = 'block';
-
-            setTimeout(() => {
-                window.location.href = 'https://chat.whatsapp.com/invite-link'; // Substitua pelo link real do grupo
-            }, 5000);
-        });
-    </script>
+  </div>
+  <div class="form-group row">
+    <label for="email" class="col-4 col-form-label">E-mail address</label>
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="fa fa-envelope"></i>
+        </div>
+        <input id="email" name="email" placeholder="Your e-mail address" type="text" required="required" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="message" class="col-4 col-form-label">Message</label>
+    <div class="col-8">
+      <textarea id="message" name="message" cols="40" rows="10" required="required" class="form-control"></textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button name="submit" type="submit" class="btn btn-primary">Send</button>
+    </div>
+  </div>
+</form>
+<div align="center">
+  <p><small>(Powered by <a rel="nofollow" href="Un-static Forms">Un-static Forms</a>)</small></p>
+</div>
 </body>
 </html>
