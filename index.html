@@ -77,20 +77,6 @@
                 d.body.appendChild(s);
             }
         </script>
-        <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const tallyIframe = document.querySelector('iframe[data-tally-src]');
-        if (tallyIframe) {
-            window.addEventListener('message', function(event) {
-                if (event.origin.includes("tally.so") && event.data === "form-submit") {
-                    // Redireciona o usuário para a nova página
-                    window.location.href = "https://sua-nova-pagina.com"; // Substitua pelo link desejado
-                }
-            });
-        }
-    });
-</script>
-
     </div>
 </body>
 </html>
